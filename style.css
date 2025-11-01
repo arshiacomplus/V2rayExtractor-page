@@ -18,8 +18,8 @@ body {
 header,
 footer {
     background: rgba(30, 30, 30, 0.5);
-    backdrop-filter: blur(10px) saturate(120%);
     -webkit-backdrop-filter: blur(10px) saturate(120%);
+    backdrop-filter: blur(10px) saturate(120%);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
 }
@@ -31,8 +31,8 @@ header {
     width: 100%;
     height: 56px;
     background: rgba(30, 30, 30, 0.5);
-    backdrop-filter: blur(10px) saturate(120%);
     -webkit-backdrop-filter: blur(10px) saturate(120%);
+    backdrop-filter: blur(10px) saturate(120%);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -256,6 +256,7 @@ footer {
 
 a,
 button {
+    -webkit-user-select: auto;
     user-select: auto;
     cursor: pointer;
     pointer-events: auto;
@@ -367,6 +368,7 @@ button {
     width: 100vw;
     height: 100vh;
     background: rgba(25, 28, 36, 0.85);
+    -webkit-backdrop-filter: blur(2px);
     backdrop-filter: blur(2px);
     align-items: center;
     justify-content: center;
@@ -553,6 +555,56 @@ input:checked+.slider:before {
     height: 1px;
     background: #3a3f4b;
     margin: 20px 0;
+}
+.stats-container {
+    background: linear-gradient(145deg, #262a35, #1f232c);
+    border: 1px solid #3a3f4b;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.stats-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #58a6ff;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.stats-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0.5rem;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #3a3f4b;
+}
+
+.stats-list li:last-child {
+    border-bottom: none;
+}
+
+.stats-list li span:first-child {
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.stats-list li .count {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3a3f4b;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0.5rem;
+    font-family: 'Courier New', monospace;
 }
 @media (max-width: 640px) {
     main {
